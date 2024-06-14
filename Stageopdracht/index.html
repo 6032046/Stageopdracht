@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maki | Home</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <!-- Custom JavaScript -->
+    <script src="script/script.js"></script>
+</head>
+
+<body class="wrapper d-flex flex-column min-vh-100">
+    <header>
+        <nav class="gradient">
+            <div class="header">
+                <a href="index.html">
+                    <img src="img/Icoon-header.png" alt="Icon" id="header-monkey" class="img-fluid">
+                    <img src="img/Logo_Maki_W.png" alt="Maki Logo" id="Maki-logo" class="ms-4 img-fluid">
+                </a>
+                <div class="d-flex">
+                    <a href="index.html" class="nav-link text-white me-3">Home</a>
+                    <a href="survey.html" class="nav-link text-white">Survey</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="d-flex justify-content-center align-items-center flex-grow-1">
+        <div class="text-center">
+            <h1>Welcome to Maki!</h1>
+            <button id="surveyBtn" class="btn btn-primary mt-3 gradient rounded-pill" data-bs-toggle="tooltip" data-bs-placement="top" title="Fill in our survey!">
+                To Survey
+            </button>
+        </div>
+    </main>
+
+    <footer class="gradient text-center text-light py-3">
+        <span>&copy; 2023 Yourmaki. All rights reserved.</span>
+    </footer>
+
+    <script>
+        $(function () {
+            $('[data-bs-toggle="tooltip"]').tooltip();
+        });
+        document.getElementById('surveyBtn').addEventListener('click', function () {
+            window.location.href = 'survey.html';
+        });
+    </script>
+</body>
+
+</html>
